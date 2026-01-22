@@ -132,17 +132,11 @@
         "method": "GET",
         "header": [],
         "url": {
-          "raw": "http://34.81.113.93:8080/fhir/ValueSet/LL1000-0/$expand",
-          "protocol": "http",
+          "raw": "{{fhirBaseUrl}}/ValueSet/LL1000-0/$expand",
           "host": [
-            "34",
-            "81",
-            "113",
-            "93"
+            "{{fhirBaseUrl}}"
           ],
-          "port": "8080",
           "path": [
-            "fhir",
             "ValueSet",
             "LL1000-0",
             "$expand"
@@ -206,16 +200,38 @@
       "response": []
     }
   ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
   "variable": [
     {
       "key": "fhirBaseUrl",
-      "value": "",
-      "type": "default"
+      "value": ""
     },
     {
       "key": "id",
-      "value": "",
-      "type": "default"
+      "value": ""
     }
   ]
 }
